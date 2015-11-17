@@ -65,15 +65,34 @@ As Gia the Gardener, I want to access regularly recorded data to know when and w
 Acceptance Stories
 ^^^^^^^^^^^^^^^^^^
 
-[Acceptance Story Name]
+[Scenario 01: Water Excess]
 ```````````````````````
+Given that it is time for another flooding of the growbed,
+And there are no clogs in the valves,
+When water begins to flow through input valve,
+Then the water level will rise to 100 mm
+And the water will be diverted into a separate valve back into the fish tank using a bypass ball valve.
+This bypass ball valve will remain open until next scheduled flooding in fill-flood cycle.
 
-::
 
-    Given [some context]
-        And [some additional context]
-        ...
-    When [event]
-    Then [outcome]
-        And [additional outcome]
-        ...
+
+[Scenario 02: Roots drowning in water]
+```````````````````````
+When there is a clog or other error causing the water level to remain high for too long,
+And the roots are drowning,
+A motorized ball valve will be used, which allows for gravity feed pressures and more precise control over water cycles.
+When there is an error with the mechanical bell siphon, this motorized ball will be used as an alternative.
+All water will be automatically drained and fill-flood watering cycle will be paused, until I manually turn it back on. An Arduino Uno microcontroller will be used to have precise control of cycle times. I will use this microcontroller to optimized growth environment of plants.
+
+
+
+[Scenario 3: Moisture and temperature Control]
+```````````````````````
+When water is entering the grow bed, there will be a moisture analog probe, 
+And the DS18B20 temperature probe will be used.
+When there is a large quantity of water that is not meeting standards of proper filtration or biotreatment, there will be a master system kill relay. 
+To prevent the soil moisture, humidity, and temperature from further irregularities, a water drain will open to detect several things.
+Maximum will be kept in the fish tank. This will ensure higher oxygen levels for fish while growbed issue is detected and addressed.
+Detect current data on Soil moisture, humidity, and temperature.
+And detect if there is a slower rate of flow in a specific output drain.
+This would indicate a possible clog from rocks, roots or other media.

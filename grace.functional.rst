@@ -63,7 +63,7 @@ and business case for each newly developed feature.
 As Gia the Gardener, I want to access regularly recorded data to know when and what is not within normal levels for several variables that directly influence the plants’ health so that necessary changes can be made immediately.
 
 Acceptance Stories
-^^^^^^^^^^^^^^^^^^
+==============
 
 [Scenario 01: Water Excess]
 ```````````````````````
